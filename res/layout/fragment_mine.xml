@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_height"
+        android:background="@color/APPTitleColor" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="小纸条 "
+            android:textColor="@color/APPTitleTextColor"
+            android:textSize="@dimen/APPTitleTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lightgray"
+        android:orientation="vertical" >
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/APPBackgroundColor"
+        android:scrollbarStyle="outsideOverlay" >
+        <LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:padding="10dp"
+		    
+		    android:orientation="vertical" >
+        <TextView 
+	        android:id="@+id/tv_test"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/test_long"
+	        android:textColor="@color/APPDefaultTextColor"
+	        android:textSize="18sp" />
+	    <ListView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	        
+	    </ListView>
+	    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
