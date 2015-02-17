@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/tv_li_notename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/test"
+        android:textColor="@color/APPDefaultTextColor"
+        android:textSize="@dimen/APPTextSizeNormal" />
+    
+    <TextView
+        android:id="@+id/tv_li_notecontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/test_long"
+        android:textColor="@color/APPDefaultTextColorLight"
+        android:textSize="@dimen/APPTextSizeSmall" />
+    
+    <LinearLayout
+        android:id="@+id/ll_li_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <ImageView
+	        android:id="@+id/iv_li_notecontent1"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:src="@drawable/campus" />
+        <ImageView
+	        android:id="@+id/iv_li_notecontent2"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:src="@drawable/campus" />
+        <ImageView
+	        android:id="@+id/iv_li_notecontent3"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:src="@drawable/campus" />
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/iv_li_sound"
+        android:layout_width="150dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/campus" />
+	
+</LinearLayout>

@@ -1,9 +1,14 @@
 package com.xiang.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class NoteItem {
+public class NoteItem implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3590104339865632760L;
 	public static final String TEXT = "text";
 	public static final String BITMAP = "bitmap";
 	public static final String SOUND = "sound";

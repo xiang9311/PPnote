@@ -1,4 +1,4 @@
-package com.example.ppnote;
+package com.xiang.ppnote;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -16,9 +17,12 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.view.ViewPager.PageTransformer;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.os.Build;
 
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+@SuppressLint("NewApi")
 public class SectionActivity extends FragmentActivity implements PageTransformer {
 	public static final String TAG = "SectionActivity";
 	public static SectionActivity that = null;
@@ -27,8 +31,10 @@ public class SectionActivity extends FragmentActivity implements PageTransformer
 	private RadioButton rb1;
 	private RadioButton rb2;
 	private RadioButton rb[];
+	public TextView tv_notebook;
 	
 	private SectionPagerAdapter sectionPagerAdapter;
+	public Fragment fragments[] = new Fragment[SectionFragment.COUNT];
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +47,10 @@ public class SectionActivity extends FragmentActivity implements PageTransformer
 		init();
 	}
 	
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+	@SuppressLint("NewApi")
 	private void init(){
+		tv_notebook = (TextView) findViewById(R.id.tv_notebook);
 		vp_section = (ViewPager) findViewById(R.id.vp_section);
 		sectionPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager());
 		vp_section.setAdapter(sectionPagerAdapter);
@@ -84,6 +93,8 @@ public class SectionActivity extends FragmentActivity implements PageTransformer
 				
 			}
 
+			@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+			@SuppressLint("NewApi")
 			@Override
 			public void onPageScrolled(int arg0, float arg1, int arg2) {
 //				arg0 :当前页面，及你点击滑动的页面
@@ -127,6 +138,7 @@ public class SectionActivity extends FragmentActivity implements PageTransformer
 			Bundle bundle = new Bundle();
 			bundle.putInt(SectionFragment.ARG_SECTION_NUMBER, arg0);
 			fragment.setArguments(bundle);
+			fragments[arg0] = fragment;
 			return fragment;
 		}
 
@@ -141,6 +153,8 @@ public class SectionActivity extends FragmentActivity implements PageTransformer
 	 * (non-Javadoc)
 	 * @see android.support.v4.view.ViewPager.PageTransformer#transformPage(android.view.View, float)
 	 */
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+	@SuppressLint("NewApi")
 	@Override
 	public void transformPage(View view, float position) {
 		/**

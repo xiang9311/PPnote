@@ -41,7 +41,7 @@
             android:layout_marginLeft="10dp"
             android:singleLine="true"
             android:ellipsize="end"
-            android:text="@string/mr"
+            android:text="@string/test"
             android:textSize="@dimen/APPTextSizeBig"
             android:textColor="@color/APPDefaultTextColor" />
 

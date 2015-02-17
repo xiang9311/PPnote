@@ -1,4 +1,4 @@
-package com.example.ppnote;
+package com.xiang.ppnote;
 
 import android.os.Bundle;
 import android.app.Activity;

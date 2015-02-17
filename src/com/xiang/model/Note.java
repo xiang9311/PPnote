@@ -1,15 +1,36 @@
 package com.xiang.model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Note {
+import org.apache.http.entity.SerializableEntity;
+
+import android.util.Log;
+
+public class Note implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3069378792709629232L;
 	public String noteName;
 	public String createTime;
 	public String updateTime;
 	public String tag;
 	public String bookName;
 	public List<NoteItem> noteItems;
+	
+	public Note(Note note){
+		this.noteName = note.noteName;
+		this.createTime = note.createTime;
+		this.updateTime = note.updateTime;
+		this.tag = note.tag;
+		this.bookName = note.bookName;
+		this.noteItems = new ArrayList<NoteItem>();
+		this.noteItems.addAll(note.noteItems);
+	}
+	
 	public Note(String noteName, String createTime, String updateTime, String tag) {
 		super();
 		this.noteName = noteName;

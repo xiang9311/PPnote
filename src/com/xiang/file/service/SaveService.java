@@ -51,15 +51,17 @@ public interface SaveService {
 	 * @param bookName 分类名
 	 * @return int 该分类下笔记的个数
 	 * @throws NoSDCardException 
+	 * @throws IOException 
 	 */
-	public int getNotesCount(String bookName) throws NoSDCardException;
+	public int getNotesCount(String bookName) throws NoSDCardException, IOException;
 	/**
 	 * 
 	 * @param bookName 分类名
 	 * @return 返回该分类下的笔记名称列表
 	 * @throws NoSDCardException 
+	 * @throws IOException 
 	 */
-	public List<String> getNotesName(String bookName) throws NoSDCardException;
+	public List<String> getNotesName(String bookName) throws NoSDCardException, IOException;
 	/**
 	 * 
 	 * @param bookName 分类名
@@ -113,4 +115,11 @@ public interface SaveService {
 	public List<NoteItem> getNoteItems(String bookName, String noteName) throws IOException, JSONException;
 	
 	public boolean addItem(String bookName, String noteName, NoteItem item) throws IOException, JSONException;
+	
+	public boolean saveNote(Note note);
+	
+	public boolean changeNoteItem(NoteItem item) throws IOException, JSONException;
+	
+	public String getTime();
+	public void removeItem(NoteItem item);
 }

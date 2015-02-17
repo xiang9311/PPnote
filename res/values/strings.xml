@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	
+
     <string name="test">我是测试猿呀，</string>
     <string name="test_long">我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，</string>
     <string name="test_longlong">我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，
@@ -18,18 +18,20 @@
         	我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，
         	我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，
         	我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，我是测试猿呀，</string>
-    
     <string name="app_name">小纸条笔记</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_section">SectionActivity</string>
-    
     <string name="paper">纸条</string>
     <string name="discovery">看看</string>
     <string name="mine">我</string>
-    
+
     <!-- 全局 -->
     <string name="empty">快点击右上角添加笔记吧，\n♪(^∇^*)</string>
     <string name="mr">默认</string>
+    <string name="title_activity_read">ReadActivity</string>
+    <string name="delete">删除</string>
+    <string name="cancle">取消</string>
+    <string name="save">保存</string>
 
 </resources>
